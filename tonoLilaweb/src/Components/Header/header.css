@@ -1,0 +1,38 @@
+
+.header__Content{
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+}
+
+.header__Content-Image-Container{
+    width: 300px;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header__Content-Image{
+    height: 100%;
+    width: auto;    
+}
+.header__Title{
+    font-size: 3rem;
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    height: 100%;
+    overflow-y: hidden;
+}
+.header__BoldText{
+    font-weight: 600;
+}
+.header__Btn{
+    background-color: #614589;
+    color: #FFF;
+    padding: 5px 30px;
+    border-style: none;
+    border-radius: 5px;
+}
