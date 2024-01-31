@@ -1,0 +1,54 @@
+.section {
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+}
+
+.creaciones {
+    background-image: url(/mobile.jpg);
+}
+
+.comunidad {
+    background-image: url(/mobile.jpg);
+}
+
+.voces {
+    background-image: url(/mobile.jpg);
+}
+
+.title-section {
+    font-family: Playfair Display, serif;
+    font-size: 2rem;
+    text-align: center;
+    padding: 2em 0 .5em 0;
+}
+
+.text-section {  
+    text-align: center;
+    line-height: normal;
+    font-size: 1rem;
+}
+
+.bold-section {
+    font-weight: bold;
+    text-align: center;
+    line-height: normal;
+    font-size: 1rem;
+}
+
+.cta {
+    background-color: purple;
+    border: none;
+    padding:.5em 1em ;
+    border-radius: 5%;
+    color: white;
+    text-align: center;
+    font-size: 1rem;
+}
