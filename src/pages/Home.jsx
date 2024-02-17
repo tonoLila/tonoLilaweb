@@ -47,7 +47,9 @@ const Home = () => {
 
   const markers = () => {
     const sections = ["voces", "creaciones", "comunidad"];
-    return sections.map((section, index) => (
+    const desktopOrder = ["voces", "creaciones", "comunidad"];
+    const orderedSections = isDesktop ? desktopOrder : sections;
+    return orderedSections.map((section, index) => (
       <div
         key={index}
         style={{
@@ -64,9 +66,9 @@ const Home = () => {
   return (
     <>
       <div className="home-container" {...handlers}>
-        {currentSection === "voces" && (<Voces markers={markers} />)}
-        {currentSection === "creaciones" && (<Creaciones markers={markers} />)}
-        {currentSection === "comunidad" && (<Comunidad markers={markers} />)}
+        {currentSection === "voces" && <Voces markers={markers} />}
+        {currentSection === "creaciones" && <Creaciones markers={markers} />}
+        {currentSection === "comunidad" && <Comunidad markers={markers} />}
       </div>
       {isDesktop && (
         <div>

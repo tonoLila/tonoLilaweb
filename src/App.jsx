@@ -1,4 +1,4 @@
-import Header from "./components/Header/Header.jsx";
+import Navbar from "./components/navbar/navbar.jsx";
 import Aboutme from "./pages/Aboutme.jsx";
 import Tienda from "./pages/Tienda.jsx";
 import Contacto from "./pages/Contacto.jsx";
@@ -8,7 +8,7 @@ import { Routes, Route } from "react-router-dom";
 function App() {
   return (
     <>
-      <Header />
+      <Navbar />
       <Routes>
         <Route path="/aboutme" element={<Aboutme />} />
         <Route path="/tienda" element={<Tienda />} />
