@@ -66,7 +66,7 @@ const Hero = ({
         </div>
       </div>
       {!isDesktop && <button className="cta">{button}</button>}
-      <div className="markers d-flex d-lg-none justify-content-center mt-3">
+      <div className="d-flex d-lg-none justify-content-center mt-3">
         {!isDesktop && markers()}
       </div>
     </motion.div>

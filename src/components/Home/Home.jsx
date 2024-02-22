@@ -135,7 +135,14 @@ const Home = () => {
           <Hero
             title="Voces artísticas"
             imageUrl="/voces.jpg"
-            normalText="Explora este espacio donde convergen las distintas formas de creatividad. A través de cautivadoras entrevistas, nos adentramos en las historias, inspiraciones y procesos creativos de talentosos artistas: músicos, escultores, pintores y más."
+            normalText={
+              <>
+                Explora este espacio donde convergen las distintas formas de
+                creatividad. A través de cautivadoras entrevistas, nos
+                adentramos en las historias, inspiraciones y procesos creativos
+                de talentosos artistas: músicos, escultores, pintores y más.
+              </>
+            }
             boldText="Descubrimos las fascinantes narrativas detrás de cada obra, llevando luz a la diversidad del mundo artístico."
             button="Ver entrevistas"
             markers={markers}
