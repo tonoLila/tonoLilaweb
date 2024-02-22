@@ -1,0 +1,136 @@
+.hero {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.creaciones {
+    background-image: url(/fondoCreaciones.jpg);
+}
+
+.comunidad {
+    background-image: url(/fondoComunidad.jpg);
+}
+
+.voces {
+    background-image: url(/fondoVoces.jpg);
+}
+
+.hero-container {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image {
+    width: 60%;
+    border-radius: 50%;
+}
+
+.image-container {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-wrap: balance;
+}
+
+.hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 5vw;
+    text-align: center;
+    padding: .2em;
+    color: white;
+}
+
+.hero-text {
+    text-align: center;
+    line-height: normal;
+    font-size: 1.2vw;
+    color: white;
+    width: 90%;
+}
+
+.hero-bold {
+    width: 90%;
+    font-weight: bold;
+    text-align: center;
+    line-height: normal;
+    font-size: 1.2vw;
+    padding: .5em;
+    color: white;
+}
+
+.cta {
+    cursor: pointer;
+    background-color: #614589;
+    border: none;
+    padding: .5em 1em;
+    border-radius: 5%;
+    color: white;
+    text-align: center;
+    font-size: 1vw;
+    font-weight: bold;
+}
+
+@media (max-width: 992px) {
+    .image-container {
+        display: none;
+    }
+
+    .hero {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+    }
+
+    .text-container {
+        width: 100%;
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero-title {
+        font-family: 'Playfair Display', serif;
+        font-size: 2rem;
+        text-align: center;
+        padding: .2em;
+        color: white;
+    }
+
+    .hero-text {
+        text-align: center;
+        font-size: 1rem;
+        color: white;
+    }
+
+    .hero-bold {
+        font-weight: bold;
+        text-align: center;
+        font-size: 1rem;
+        padding: .5em;
+        color: white;
+    }
+
+    .cta {
+        font-size: 1em;
+    }
+}

@@ -1,8 +1,8 @@
-import Navbar from "./components/navbar/navbar";
+import Navbar from "./components/Navbar/Navbar";
 import Aboutme from "./pages/Aboutme";
 import Tienda from "./pages/Tienda";
 import Contacto from "./pages/Contacto";
-import Home from './components/Home/Home'
+import Home from "./components/Home/Home";
 import { Routes, Route } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 

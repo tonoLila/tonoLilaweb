@@ -1,11 +1,9 @@
+// Home.jsx
 import { useState, useEffect } from "react";
 import { useSwipeable } from "react-swipeable";
-import Creaciones from "../Sections/Creaciones";
-import Voces from "../Sections/Voces";
-import Comunidad from "../Sections/Comunidad";
 import { motion } from "framer-motion";
-import "../../styles/home.css";
-import WheelControls from "../WheelControls/WheelControls";
+import Wheel from "../Wheel/Wheel";
+import Hero from "../Hero/Hero";
 
 const Home = () => {
   const [currentSection, setCurrentSection] = useState("creaciones");
@@ -76,50 +74,77 @@ const Home = () => {
         {...handlers}
         className="home-container"
         initial={{
-          opacity: 0,
-          x:
-            direction === "left" ? "100%" : direction === "right" ? "-100%" : 0,
+          opacity: isDesktop ? 1 : 0,
+          x: isDesktop
+            ? 0
+            : direction === "left"
+            ? "100%"
+            : direction === "right"
+            ? "-100%"
+            : 0,
         }}
         animate={{ opacity: 1, x: 0 }}
-        exit={{ opacity: 0, transition: { duration: 0.1 } }}
+        exit={{ opacity: isDesktop ? 1 : 0, transition: { duration: 0.1 } }}
         transition={{
           x: { type: "anticipate", duration: 0.1, ease: "easeOut" },
         }}
       >
         {currentSection === "comunidad" && (
-          <Comunidad
-            isDesktop={isDesktop}
-            markers={markers}
-            WheelControls={
-              isDesktop && (
-                <WheelControls onPrev={handlePrev} onNext={handleNext} />
-              )
+          <Hero
+            title="Comunidad"
+            imageUrl="/comunidad.jpg"
+            normalText={
+              <>
+                En este espacio convergen datos fascinantes, curiosidades y
+                efemérides relacionadas con el arte.
+                <br />
+                <br /> Exploramos juntos el vasto universo cultural,
+                descubriendo detalles que enriquecen nuestra comprensión y
+                aprecio por la creatividad.
+              </>
             }
+            boldText="¡Cada día es una oportunidad para aprender, compartir, rememorar y celebrar la riqueza del arte!"
+            button="Descubrir +"
+            markers={markers}
+            isDesktop={isDesktop}
+            sectionClass="comunidad"
           />
         )}
         {currentSection === "creaciones" && (
-          <Creaciones
-            isDesktop={isDesktop}
-            markers={markers}
-            WheelControls={
-              isDesktop && (
-                <WheelControls onPrev={handlePrev} onNext={handleNext} />
-              )
+          <Hero
+            title="Creaciones Lila"
+            imageUrl="/creaciones.jpg"
+            normalText={
+              <>
+                ¡Bienvenidos a mi rincón visual! Soy Lila, la mente y el ojo
+                detrás de cada imagen que encontrarán aquí.
+                <br />
+                <br /> Les invito a explorar mi mundo a través de la fotografía,
+                donde cada captura es una expresión única de mi creatividad y
+                visión.
+              </>
             }
+            boldText="¡Acompáñenme en este viaje fotográfico y descubran las narrativas visuales que he tejido para ustedes!"
+            button="Descubrir +"
+            markers={markers}
+            isDesktop={isDesktop}
+            sectionClass="creaciones"
           />
         )}
         {currentSection === "voces" && (
-          <Voces
-            isDesktop={isDesktop}
+          <Hero
+            title="Voces artísticas"
+            imageUrl="/voces.jpg"
+            normalText="Explora este espacio donde convergen las distintas formas de creatividad. A través de cautivadoras entrevistas, nos adentramos en las historias, inspiraciones y procesos creativos de talentosos artistas: músicos, escultores, pintores y más."
+            boldText="Descubrimos las fascinantes narrativas detrás de cada obra, llevando luz a la diversidad del mundo artístico."
+            button="Ver entrevistas"
             markers={markers}
-            WheelControls={
-              isDesktop && (
-                <WheelControls onPrev={handlePrev} onNext={handleNext} />
-              )
-            }
+            isDesktop={isDesktop}
+            sectionClass="voces"
           />
         )}
       </motion.div>
+      {isDesktop && <Wheel onPrev={handlePrev} onNext={handleNext} />}
     </>
   );
 };

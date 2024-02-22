@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "../../styles/hamburgers.css";
 import "../../styles/navbar.css";
 import { NavLink } from "react-router-dom";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Burger = () => {
   const [isActive, setIsActive] = useState(false);
@@ -15,13 +16,28 @@ const Burger = () => {
   };
 
   const navItems = [
-    <NavLink to="/aboutme" className="nav-item" key="aboutme" onClick={handleItemClick}>
+    <NavLink
+      to="/aboutme"
+      className="nav-item"
+      key="aboutme"
+      onClick={handleItemClick}
+    >
       Quien soy?
     </NavLink>,
-    <NavLink to="/tienda" className="nav-item" key="tienda" onClick={handleItemClick}>
+    <NavLink
+      to="/tienda"
+      className="nav-item"
+      key="tienda"
+      onClick={handleItemClick}
+    >
       Tienda
     </NavLink>,
-    <NavLink to="/contacto" className="nav-item button" key="contacto" onClick={handleItemClick}>
+    <NavLink
+      to="/contacto"
+      className="nav-item button"
+      key="contacto"
+      onClick={handleItemClick}
+    >
       ¡Hagamos arte!
     </NavLink>,
   ];
@@ -37,15 +53,23 @@ const Burger = () => {
           <span className="hamburger-inner"></span>
         </span>
       </button>
-      {isActive && (
-        <div className="nav-menu">
-          <ul className="nav-list">
-            {navItems.map((item, index) => (
-              <li key={index}>{item}</li>
-            ))}
-          </ul>
-        </div>
-      )}
+      <AnimatePresence>
+        {isActive && (
+          <motion.div
+            className="nav-menu"
+            initial={{ y: -1000 }}
+            animate={{ y: 0 }}
+            exit={{ y: -1000 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+          >
+            <ul className="nav-list">
+              {navItems.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   );
 };

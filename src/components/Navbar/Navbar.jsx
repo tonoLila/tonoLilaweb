@@ -57,7 +57,7 @@ const Navbar = () => {
       {(isDesktop || isMenuOpen) && (
         <motion.div
           className="nav-menu"
-          initial={{ scale: 2, filter: "blur(10px)", opacity: 1 }}
+          initial={{ scale: 2, filter: "blur(10px)", opacity: 0 }}
           animate={{ scale: 1, filter: "blur(0px)", opacity: 1 }}
           transition={{
             scale: { type: "tween", duration: 0.2, ease: "easeOut" },
