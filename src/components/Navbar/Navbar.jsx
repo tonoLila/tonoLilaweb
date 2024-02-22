@@ -1,44 +1,78 @@
-import { Link, NavLink } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import Burger from "./Burger";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
+  const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 992);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsDesktop(window.innerWidth >= 992);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  const handleItemClick = () => {
+    setIsMenuOpen(false);
+  };
+
+  const navItems = [
+    <Link
+      to="/aboutme"
+      className="nav-item"
+      key="aboutme"
+      onClick={handleItemClick}
+    >
+      Quien soy?
+    </Link>,
+    <Link
+      to="/tienda"
+      className="nav-item"
+      key="tienda"
+      onClick={handleItemClick}
+    >
+      Tienda
+    </Link>,
+    <Link
+      to="/contacto"
+      className="nav-item button"
+      key="contacto"
+      onClick={handleItemClick}
+    >
+      ¡Hagamos arte!
+    </Link>,
+  ];
+
   return (
-    <nav className="header navbar navbar-expand-lg bg-transparent">
-      <div className="container-fluid">
-        <Link to="/" className="brand">
-          Tono <span>Lila</span>
-        </Link>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
+    <div className="nav">
+      <Link to="/" className="logo">
+        Tono <span>Lila</span>
+      </Link>
+      {!isDesktop && <Burger />}
+      {(isDesktop || isMenuOpen) && (
+        <motion.div
+          className="nav-menu"
+          initial={{ scale: 2, filter: "blur(10px)", opacity: 1 }}
+          animate={{ scale: 1, filter: "blur(0px)", opacity: 1 }}
+          transition={{
+            scale: { type: "tween", duration: 0.2, ease: "easeOut" },
+          }}
         >
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-            <li className="nav-item">
-              <NavLink to="/aboutme" className="nav-link navbar__Btn">
-                Quien soy?
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink to="/tienda" className="nav-link navbar__Btn">
-                Tienda
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink to="/contacto" className="nav-link navbar__Btn">
-                ¡Hagamos arte!
-              </NavLink>
-            </li>
+          <ul className="nav-list">
+            {navItems.map((item, index) => (
+              <li key={index} onClick={handleItemClick}>
+                {item}
+              </li>
+            ))}
           </ul>
-        </div>
-      </div>
-    </nav>
+        </motion.div>
+      )}
+    </div>
   );
 };
 

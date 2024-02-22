@@ -1,20 +1,23 @@
-import Navbar from "./components/navbar/navbar.jsx";
-import Aboutme from "./pages/Aboutme.jsx";
-import Tienda from "./pages/Tienda.jsx";
-import Contacto from "./pages/Contacto.jsx";
-import Home from "./pages/Home.jsx";
+import Navbar from "./components/navbar/navbar";
+import Aboutme from "./pages/Aboutme";
+import Tienda from "./pages/Tienda";
+import Contacto from "./pages/Contacto";
+import Home from './components/Home/Home'
 import { Routes, Route } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
 
 function App() {
   return (
     <>
       <Navbar />
-      <Routes>
-        <Route path="/aboutme" element={<Aboutme />} />
-        <Route path="/tienda" element={<Tienda />} />
-        <Route path="/contacto" element={<Contacto />} />
-        <Route path="/" element={<Home />} />
-      </Routes>
+      <AnimatePresence>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/aboutme" element={<Aboutme />} />
+          <Route path="/tienda" element={<Tienda />} />
+          <Route path="/contacto" element={<Contacto />} />
+        </Routes>
+      </AnimatePresence>
     </>
   );
 }
