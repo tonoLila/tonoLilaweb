@@ -1,6 +1,6 @@
 .logo {
     text-decoration: none;
-    color: white;
+    color: #ffff;
     font-family: Inter;
     font-size: 1.5rem;
     text-transform: uppercase;
@@ -9,7 +9,7 @@
 
 .logo span {
     font-weight: bold;
-    color: #614589;
+    color: #fff;
 }
 
 .nav {
@@ -50,10 +50,6 @@
 
 @media (max-width: 992px) {
 
-    .logo {
-        color: black;
-    }
-
     .nav-menu {
         position: fixed;
         width: 100vw;
@@ -63,7 +59,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); */
     }
 
     .nav {

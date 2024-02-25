@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import "../../styles/hamburgers.css";
-import "../../styles/navbar.css";
+import "@styles/hamburgers.css";
+import "@styles/navbar.css";
 import { NavLink } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 

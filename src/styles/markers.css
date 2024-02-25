@@ -1,0 +1,19 @@
+.markers-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+    padding-bottom: 2em;
+}
+
+.marker {
+    width: 30px;
+    height: 5px;
+    border-radius: 30%;
+    background-color: transparent;
+    margin: 0 5px;
+    border: 1px solid #fff;
+}
+
+.marker.active {
+    background-color: #fff;
+}

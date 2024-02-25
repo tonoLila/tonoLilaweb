@@ -45,6 +45,7 @@
     justify-content: center;
     align-items: center;
     text-wrap: balance;
+    padding: 0 5em;
 }
 
 .hero-title {
@@ -52,14 +53,14 @@
     font-size: 4em;
     text-align: center;
     padding: .2em;
-    color: white;
+    color: #fff;
 }
 
 .hero-text {
     text-align: center;
     line-height: normal;
     font-size: 1em;
-    color: white;
+    color: #fff;
     width: 90%;
 }
 
@@ -70,7 +71,7 @@
     line-height: normal;
     font-size: 1em;
     padding: .5em;
-    color: white;
+    color: #fff;
 }
 
 .cta {
@@ -79,7 +80,7 @@
     border: none;
     padding: .5em 1em;
     border-radius: 5%;
-    color: white;
+    color: #fff;
     text-align: center;
     font-size: 1em;
     font-weight: bold;
@@ -108,28 +109,41 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        padding: 0;
     }
 
     .hero-title {
         font-family: 'Playfair Display', serif;
         font-size: 2em;
         text-align: center;
-        padding: .2em;
-        color: white;
+        padding: .5em;
+        color: #fff;
     }
 
     .hero-text {
         font-size: 1em;
-        color: white;
+        color: #fff;
     }
 
     .hero-bold {
         font-size: 1em;
         padding: .5em;
-        color: white;
+        color: #fff;
     }
 
     .cta {
         font-size: 1em;
+    }
+
+    .creaciones {
+        background-image: url(/fondoMobile.webp);
+    }
+    
+    .comunidad {
+        background-image: url(/fondoMobile.webp);
+    }
+    
+    .voces {
+        background-image: url(/fondoMobile.webp);
     }
 }

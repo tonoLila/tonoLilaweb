@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import Burger from "./Burger";
+import Burger from "@components/Burger";
 import { motion } from "framer-motion";
 
 const Navbar = () => {
