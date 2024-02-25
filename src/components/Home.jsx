@@ -52,8 +52,8 @@ const Home = () => {
   return (
     <>
       <motion.div
-        key={currentSection}
         {...handlers}
+        key={currentSection}
         className="home-container"
         initial={{
           opacity: isDesktop ? 1 : 0,

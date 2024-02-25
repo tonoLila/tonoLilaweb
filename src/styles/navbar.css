@@ -1,6 +1,6 @@
 .logo {
     text-decoration: none;
-    color: #ffff;
+    color: #fff;
     font-family: Inter;
     font-size: 1.5rem;
     text-transform: uppercase;
@@ -33,7 +33,7 @@
 
 .nav-item {
     text-decoration: none;
-    color: white;
+    color: #fff;
 }
 
 .nav-item a {
@@ -45,7 +45,7 @@
     padding: .5em .5em;
     border-radius: 5%;
     background-color: #614589;
-    color: white;
+    color: #fff;
 }
 
 @media (max-width: 992px) {
@@ -59,7 +59,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); */
     }
 
     .nav {
@@ -81,7 +80,7 @@
         font-weight: bold;
         margin-bottom: 3em;
         font-size: 1rem;
-        color: white;
+        color: #fff;
     }
 
     .hamburger {

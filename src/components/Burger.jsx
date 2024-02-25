@@ -57,9 +57,9 @@ const Burger = () => {
         {isActive && (
           <motion.div
             className="nav-menu"
-            initial={{ y: -1000 }}
+            initial={{ y: "-100%" }}
             animate={{ y: 0 }}
-            exit={{ y: -1000 }}
+            exit={{ y: "-100%" }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
           >
             <ul className="nav-list">
