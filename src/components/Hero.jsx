@@ -15,9 +15,9 @@ const Hero = ({
   return (
     <motion.div
       className={`hero ${currentSection}`}
-      initial={{ opacity: 0, filter: "blur(20px)" }}
-      animate={{ opacity: 1, filter: "blur(0px)" }}
-      exit={{ opacity: 0, filter: "blur(25px)" }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
       transition={{
         type: "tween",
         duration: 0.5,
