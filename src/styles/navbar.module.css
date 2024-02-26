@@ -24,19 +24,19 @@
     position: fixed;
 }
 
-.nav-list {
+.nav_list {
     display: flex;
     align-items: center;
     gap: 1em;
     list-style: none;
 }
 
-.nav-item {
+.nav_item {
     text-decoration: none;
     color: #fff;
 }
 
-.nav-item a {
+.nav_item a {
     padding: 1em .5em;
 }
 
@@ -50,11 +50,13 @@
 
 @media (max-width: 992px) {
 
-    .nav-menu {
-        position: fixed;
+    .nav_menu {
+        position: absolute;
+        top: 0;
+        left: 0;
         width: 100vw;
         height: 100vh;
-        background-color: rgb(0, 0, 0);
+        background-color: #000;
         z-index: 5;
         display: flex;
         justify-content: center;
@@ -62,31 +64,34 @@
     }
 
     .nav {
-        position: fixed;
+        position: absolute;
         background-color: transparent;
+        align-items: center;
+        justify-content: space-between;
     }
 
-    .nav-list {
+    .nav_list {
         flex-direction: column;
         padding: 0;
-        margin-top: 5em;
     }
 
-    .nav-item {
+    .nav_item {
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
         font-weight: bold;
-        margin-bottom: 3em;
+        margin: 2em;
         font-size: 1rem;
         color: #fff;
     }
 
-    .hamburger {
+    .burger {
         z-index: 10;
-        position: fixed;
-        top: 5px;
-        right: 15px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 1em 2em;
+        margin-top: .3em;
     }
 }

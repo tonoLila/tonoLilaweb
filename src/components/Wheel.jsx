@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import styles from "@styles/wheel.module.css";
 const Wheel = ({ onPrev, onNext }) => {
   const [angle, setAngle] = useState(0);
   const [isActive, setIsActive] = useState(false);
@@ -15,9 +16,9 @@ const Wheel = ({ onPrev, onNext }) => {
   };
 
   return (
-    <div className="wheel-container">
+    <>
       <svg
-        className="wheel"
+        className={styles.wheel}
         width="1080"
         height="768"
         viewBox="0 -700 1440 1024"
@@ -144,9 +145,9 @@ const Wheel = ({ onPrev, onNext }) => {
           opacity="0.6"
           d="M843.701 149.04L767.651 358C764.941 365.44 757.191 369.78 749.431 368.2C739.951 366.28 730.141 365.26 720.101 365.26C710.061 365.26 700.251 366.27 690.771 368.2C683.011 369.78 675.261 365.44 672.551 358L596.501 149.04C593.331 140.33 598.211 130.81 607.101 128.19C643.641 117.44 681.541 112 720.101 112C758.661 112 796.571 117.43 833.101 128.19C841.991 130.81 846.861 140.33 843.701 149.04Z"
           fill="#614589"
-          initial={{ opacity: .6 }}
-          animate={{ opacity: isActive ? 0 : .6 }}
-          exit={{ opacity: .6 }}
+          initial={{ opacity: 0.6 }}
+          animate={{ opacity: isActive ? 0 : 0.6 }}
+          exit={{ opacity: 0.6 }}
           transition={{ duration: 0.1, ease: "easeOut" }}
         />
         <path
@@ -154,7 +155,6 @@ const Wheel = ({ onPrev, onNext }) => {
             handleClick(1);
             onPrev();
           }}
-          id="left"
           opacity="0.6"
           d="M650.148 382.98C632.728 392.44 617.448 405.33 605.198 420.74C600.268 426.94 591.548 428.58 584.698 424.63L392.168 313.46C384.138 308.82 381.758 298.38 386.898 290.66C429.488 226.65 489.708 176.1 559.958 145.37C568.448 141.65 578.318 145.81 581.488 154.52L657.528 363.47C660.228 370.9 657.108 379.2 650.158 382.98H650.148Z"
           fill="transparent"
@@ -164,7 +164,6 @@ const Wheel = ({ onPrev, onNext }) => {
             handleClick(2);
             onNext();
           }}
-          id="right"
           opacity="0.6"
           d="M1048.04 313.44L855.509 424.61C848.649 428.57 839.929 426.92 835.009 420.72C822.759 405.31 807.469 392.43 790.059 382.96C783.109 379.18 779.989 370.88 782.689 363.45L858.729 154.5C861.899 145.79 871.769 141.63 880.259 145.35C950.509 176.08 1010.72 226.63 1053.32 290.64C1058.46 298.36 1056.08 308.8 1048.05 313.44H1048.04Z"
           fill="transparent"
@@ -207,7 +206,7 @@ const Wheel = ({ onPrev, onNext }) => {
           </filter>
         </defs>
       </svg>
-    </div>
+    </>
   );
 };
 

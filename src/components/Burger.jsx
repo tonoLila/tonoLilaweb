@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "@styles/hamburgers.css";
-import "@styles/navbar.css";
+import styles from "@styles/navbar.module.css";
 import { NavLink } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -18,7 +18,7 @@ const Burger = () => {
   const navItems = [
     <NavLink
       to="/aboutme"
-      className="nav-item"
+      className={styles.nav_item}
       key="aboutme"
       onClick={handleItemClick}
     >
@@ -26,7 +26,7 @@ const Burger = () => {
     </NavLink>,
     <NavLink
       to="/tienda"
-      className="nav-item"
+      className={styles.nav_item}
       key="tienda"
       onClick={handleItemClick}
     >
@@ -34,7 +34,7 @@ const Burger = () => {
     </NavLink>,
     <NavLink
       to="/contacto"
-      className="nav-item button"
+      className={`${styles.nav_item} ${styles.button}`}
       key="contacto"
       onClick={handleItemClick}
     >
@@ -45,7 +45,9 @@ const Burger = () => {
   return (
     <>
       <button
-        className={`hamburger hamburger--spin ${isActive ? "is-active" : ""}`}
+        className={`${styles.burger} hamburger hamburger--spin ${
+          isActive ? styles["is-active"] : ""
+        }`}
         type="button"
         onClick={handleMenuToggle}
       >
@@ -56,13 +58,13 @@ const Burger = () => {
       <AnimatePresence>
         {isActive && (
           <motion.div
-            className="nav-menu"
+            className={styles.nav_menu}
             initial={{ y: "-100%" }}
             animate={{ y: 0 }}
             exit={{ y: "-100%" }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
           >
-            <ul className="nav-list">
+            <ul className={styles.nav_list}>
               {navItems.map((item, index) => (
                 <li key={index}>{item}</li>
               ))}

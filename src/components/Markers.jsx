@@ -1,12 +1,14 @@
-import "@styles/markers.css";
+import styles from "@styles/markers.module.css";
 
 const Markers = ({ sections, currentSection }) => {
   return (
-    <div className="markers-container">
+    <div className={styles.markers_container}>
       {sections.map((section, index) => (
         <div
           key={index}
-          className={`marker ${currentSection === section ? "active" : ""}`}
+          className={`${styles.marker} ${
+            currentSection === section ? styles.active : ""
+          }`}
         ></div>
       ))}
     </div>

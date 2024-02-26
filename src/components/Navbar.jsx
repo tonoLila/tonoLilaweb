@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Burger from "@components/Burger";
 import { motion } from "framer-motion";
+import styles from "@styles/navbar.module.css";
 
 const Navbar = () => {
   const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 992);
@@ -24,7 +25,7 @@ const Navbar = () => {
   const navItems = [
     <Link
       to="/aboutme"
-      className="nav-item"
+      className={styles.nav_item}
       key="aboutme"
       onClick={handleItemClick}
     >
@@ -32,7 +33,7 @@ const Navbar = () => {
     </Link>,
     <Link
       to="/tienda"
-      className="nav-item"
+      className={styles.nav_item}
       key="tienda"
       onClick={handleItemClick}
     >
@@ -40,7 +41,7 @@ const Navbar = () => {
     </Link>,
     <Link
       to="/contacto"
-      className="nav-item button"
+      className={`${styles.nav_item} ${styles.button}`}
       key="contacto"
       onClick={handleItemClick}
     >
@@ -49,21 +50,21 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="nav">
-      <Link to="/" className="logo">
+    <div className={styles.nav}>
+      <Link to="/" className={styles.logo}>
         Tono <span>Lila</span>
       </Link>
       {!isDesktop && <Burger />}
       {(isDesktop || isMenuOpen) && (
         <motion.div
-          className="nav-menu"
+          className={styles.nav_menu}
           initial={{ scale: 2, filter: "blur(10px)", opacity: 0 }}
           animate={{ scale: 1, filter: "blur(0px)", opacity: 1 }}
           transition={{
             scale: { type: "tween", duration: 0.2, ease: "easeOut" },
           }}
         >
-          <ul className="nav-list">
+          <ul className={styles.nav_list}>
             {navItems.map((item, index) => (
               <li key={index} onClick={handleItemClick}>
                 {item}

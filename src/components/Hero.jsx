@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import Markers from "@components/Markers";
-import "@styles/hero.css";
+import styles from "@styles/hero.module.css";
 
 const Hero = ({
   title,
@@ -14,7 +14,7 @@ const Hero = ({
 }) => {
   return (
     <motion.div
-      className={`hero ${currentSection}`}
+      className={`${styles.hero} ${currentSection}`}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
@@ -24,11 +24,11 @@ const Hero = ({
         ease: "easeInOut",
       }}
     >
-      <div className="hero-container container-fluid">
-        <div className="image-container">
+      <div className={styles.hero_container}>
+        <div className={styles.image_container}>
           <motion.img
             src={imageUrl}
-            className="hero-image"
+            className={styles.hero_image}
             initial={{ filter: "blur(10px)" }}
             animate={{ filter: "blur(0px)" }}
             exit={{ filter: "blur(25px)" }}
@@ -36,19 +36,19 @@ const Hero = ({
           />
         </div>
         <div
-          className="text-container"
+          className={styles.text_container}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.5, ease: "easeInOut" }}
         >
-          <h2 className="hero-title">{title}</h2>
-          <p className="hero-text">{normalText}</p>
-          <p className="hero-bold">{boldText}</p>
-          {isDesktop && <button className="cta">{button}</button>}
+          <h2 className={styles.hero_title}>{title}</h2>
+          <p className={styles.hero_text}>{normalText}</p>
+          <p className={styles.hero_bold}>{boldText}</p>
+          {isDesktop && <button className={styles.cta}>{button}</button>}
         </div>
       </div>
-      {!isDesktop && <button className="cta">{button}</button>}
+      {!isDesktop && <button className={styles.cta}>{button}</button>}
       <div>
         {!isDesktop && (
           <Markers sections={sections} currentSection={currentSection} />

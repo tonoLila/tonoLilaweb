@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Wheel from "@components/Wheel";
 import Hero from "@components/Hero";
 import HeroTexts from "@components/HeroTexts";
+import styles from "@styles/home.module.css";
 
 const Home = () => {
   const [currentSection, setCurrentSection] = useState("creaciones");
@@ -54,16 +55,16 @@ const Home = () => {
       <motion.div
         {...handlers}
         key={currentSection}
-        className="home-container"
+        className={styles.home_container}
         initial={{
           opacity: isDesktop ? 1 : 0,
-          x: isDesktop
-            ? 0
-            : direction === "left"
-            ? "100%"
-            : direction === "right"
-            ? "-100%"
-            : 0,
+            x: isDesktop
+              ? 0
+              : direction === "left"
+              ? "100%"
+              : direction === "right"
+              ? "-100%"
+              : 0,
         }}
         animate={{ opacity: 1, x: 0 }}
         exit={{ opacity: isDesktop ? 1 : 0, transition: { duration: 0.1 } }}
