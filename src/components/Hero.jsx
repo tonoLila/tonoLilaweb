@@ -47,13 +47,15 @@ const Hero = ({
           <p className={styles.hero_bold}>{boldText}</p>
           {isDesktop && <button className={styles.cta}>{button}</button>}
         </div>
-      </div>
-      {!isDesktop && <button className={styles.cta}>{button}</button>}
-      <div>
         {!isDesktop && (
-          <Markers sections={sections} currentSection={currentSection} />
+          <div className="button_container">
+            <button className={styles.cta_mobile}>{button}</button>
+            <Markers sections={sections} currentSection={currentSection} />
+          </div>
         )}
       </div>
+
+
     </motion.div>
   );
 };
