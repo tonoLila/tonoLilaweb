@@ -9,11 +9,11 @@
 }
 
 .hero_container {
-    height: 80vh;
-    width: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 80vh;
+    width: 80%;
     padding: 0 5em;
 }
 
@@ -92,7 +92,8 @@
         height: 100vh;
         padding: 0;
         flex-direction: column;
-        justify-content: space-evenly;
+        justify-content: space-between;
+        align-items: center;
     }
 
     .text_container {
@@ -102,6 +103,8 @@
         justify-content: center;
         align-items: center;
         padding: 1em;
+        padding-bottom: 5em;
+        margin-top: auto;
     }
 
     .hero_title {
