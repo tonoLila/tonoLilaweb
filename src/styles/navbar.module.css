@@ -27,7 +27,7 @@
 .nav_list {
     display: flex;
     align-items: center;
-    gap: 1em;
+    gap: 2em;
     list-style: none;
 }
 
@@ -43,7 +43,7 @@
 .button {
     border: none;
     padding: .5em .5em;
-    border-radius: 5%;
+    border-radius: 5px;
     background-color: #614589;
     color: #fff;
 }

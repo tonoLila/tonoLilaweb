@@ -39,20 +39,32 @@ const Navbar = () => {
     >
       Tienda
     </Link>,
-    <Link
-      to="/contacto"
-      className={`${styles.nav_item} ${styles.button}`}
-      key="contacto"
-      onClick={handleItemClick}
-    >
-      ¡Hagamos arte!
-    </Link>,
+    <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+      <Link
+        to="/contacto"
+        className={`${styles.nav_item} ${styles.button}`}
+        key="contacto"
+        onClick={handleItemClick}
+      >
+        ¡Hagamos arte!
+      </Link>
+      ,
+    </motion.div>,
   ];
 
   return (
     <div className={styles.nav}>
       <Link to="/" className={styles.logo}>
-        Tono <span>Lila</span>
+        Tono{" "}
+        <motion.span
+          style={{ textShadow: "0 0 5px #fff" }}
+          animate={{
+            textShadow: ["0 0 5px #fff", "0 0 15px #fff", "0 0 5px #fff"],
+          }}
+          transition={{ repeat: Infinity, duration: 2, ease: "linear" }}
+        >
+          Lila
+        </motion.span>
       </Link>
       {!isDesktop && <Burger />}
       {(isDesktop || isMenuOpen) && (
