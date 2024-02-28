@@ -86,9 +86,9 @@ const Focus = ({ children }) => {
       </g>
       <foreignObject x="0" y="0" width="100%" height="100%">
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 2, ease: "easeInOut" }}
+          initial={{ filter: "blur(10px)" }}
+          animate={{ filter: "blur(0px)" }}
+          transition={{ duration: 1, type: "tween", ease: "easeInOut" }}
           className={styles.focus_container}
         >
           {children}
