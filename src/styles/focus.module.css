@@ -9,6 +9,7 @@
     border-radius: 10px;
 }
 
-.focus {
-    padding-top: 5em;
+.focus_svg {
+    margin-top: 5em;
+    padding: 3em;
 }

@@ -46,7 +46,7 @@ const Burger = () => {
     <>
       <button
         className={`${styles.burger} hamburger hamburger--spin ${
-          isActive ? styles["is-active"] : ""
+          isActive ? "is-active" : ""
         }`}
         type="button"
         onClick={handleMenuToggle}

@@ -1,8 +1,18 @@
 import { motion } from "framer-motion";
 import styles from "@styles/focus.module.css";
-const Focus = ({ children }) => {
+const Focus = () => {
   return (
     <motion.svg
+      initial={{ scale: 1, transformOrigin: "center" }}
+      animate={{
+        scale: [0.9, 1, 0.95, 1],
+      }}
+      transition={{
+        duration: 0.6,
+        type: "spring",
+        stiffness: 150,
+        damping: 10,
+      }}
       className={styles.focus}
       width="100%"
       height=" 100%"
@@ -84,16 +94,6 @@ const Focus = ({ children }) => {
           strokeLinecap="round"
         />
       </g>
-      <foreignObject x="0" y="0" width="100%" height="100%">
-        <motion.div
-          initial={{ filter: "blur(10px)" }}
-          animate={{ filter: "blur(0px)" }}
-          transition={{ duration: 1, type: "tween", ease: "easeInOut" }}
-          className={styles.focus_container}
-        >
-          {children}
-        </motion.div>
-      </foreignObject>
     </motion.svg>
   );
 };
