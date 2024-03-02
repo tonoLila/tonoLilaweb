@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import Markers from "@components/Markers";
 import styles from "@styles/hero.module.css";
-import RectangularSVG from "./FocusSVG";
+import FocusContainerDesktop from "./FocusDesktop/FocusContainerDesktop";
 
 const Hero = ({
   title,
@@ -26,7 +26,7 @@ const Hero = ({
       }}
     >
       <div className={styles.hero_container}>
-        <RectangularSVG>
+        <FocusContainerDesktop>
           <div className={styles.image_container}>
             <img src={imageUrl} className={styles.hero_image} />
           </div>
@@ -42,7 +42,7 @@ const Hero = ({
             <p className={styles.hero_bold}>{boldText}</p>
             {isDesktop && <button className={styles.cta}>{button}</button>}
           </div>
-        </RectangularSVG>
+        </FocusContainerDesktop>
         {!isDesktop && (
           <div className="button_container">
             <button className={styles.cta_mobile}>{button}</button>
