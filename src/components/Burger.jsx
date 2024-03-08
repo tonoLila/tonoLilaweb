@@ -45,7 +45,7 @@ const Burger = () => {
   return (
     <>
       <button
-        className={`${styles.burger} hamburger hamburger--spin ${
+        className={`${styles.burger} hamburger hamburger--collapse ${
           isActive ? "is-active" : ""
         }`}
         type="button"
