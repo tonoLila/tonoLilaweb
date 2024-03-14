@@ -58,13 +58,13 @@ const Home = () => {
         className={styles.home_container}
         initial={{
           opacity: isDesktop ? 1 : 0,
-            x: isDesktop
-              ? 0
-              : direction === "left"
-              ? "100%"
-              : direction === "right"
-              ? "-100%"
-              : 0,
+          x: isDesktop
+            ? 0
+            : direction === "left"
+            ? "100%"
+            : direction === "right"
+            ? "-100%"
+            : 0,
         }}
         animate={{ opacity: 1, x: 0 }}
         exit={{ opacity: isDesktop ? 1 : 0, transition: { duration: 0.1 } }}
@@ -94,7 +94,13 @@ const Home = () => {
           currentSection={currentSection}
         />
       </motion.div>
-      {isDesktop && <Wheel onPrev={handlePrev} onNext={handleNext} />}
+      {isDesktop && (
+        <Wheel
+          currentSection={currentSection}
+          onPrev={handlePrev}
+          onNext={handleNext}
+        />
+      )}
     </>
   );
 };

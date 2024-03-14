@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import styles from "@styles/gallery.module.css";
-import { images } from "@utils";
+import { images } from "@galleryImages";
 
 const Gallery = () => {
   const targetRef = useRef(null);
