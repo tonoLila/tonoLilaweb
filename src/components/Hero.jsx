@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import Markers from "@components/Markers";
 import styles from "@styles/hero.module.css";
 import FocusContainerDesktop from "./FocusDesktop/FocusContainerDesktop";
+import FocusContainerMobile from "./FocusMobile/FocusContainerMobile";
 
 const Hero = ({
   title,
@@ -13,6 +14,10 @@ const Hero = ({
   sections,
   currentSection,
 }) => {
+  const FocusContainer = isDesktop
+    ? FocusContainerDesktop
+    : FocusContainerMobile;
+
   return (
     <motion.div
       className={`${styles.hero} ${currentSection}`}
@@ -26,10 +31,12 @@ const Hero = ({
       }}
     >
       <div className={styles.hero_container}>
-        <FocusContainerDesktop>
-          <div className={styles.image_container}>
-            <img src={imageUrl} className={styles.hero_image} />
-          </div>
+        <FocusContainer>
+          {isDesktop && (
+            <div className={styles.image_container}>
+              <img src={imageUrl} className={styles.hero_image} />
+            </div>
+          )}
           <div
             className={styles.text_container}
             initial={{ opacity: 0 }}
@@ -40,15 +47,15 @@ const Hero = ({
             <h2 className={styles.hero_title}>{title}</h2>
             <p className={styles.hero_text}>{normalText}</p>
             <p className={styles.hero_bold}>{boldText}</p>
-            {isDesktop && <button className={styles.cta}>{button}</button>}
+            <button className={styles.cta}>{button}</button>
           </div>
-        </FocusContainerDesktop>
-        {!isDesktop && (
-          <div className="button_container">
-            <button className={styles.cta_mobile}>{button}</button>
-            <Markers sections={sections} currentSection={currentSection} />
-          </div>
-        )}
+          </FocusContainer>
+
+          {!isDesktop && (
+            <div className="button_container">
+              <Markers sections={sections} currentSection={currentSection} />
+            </div>
+          )}
       </div>
     </motion.div>
   );
