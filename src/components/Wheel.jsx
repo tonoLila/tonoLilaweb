@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import IconWheel from "@components/iconWheel";
+import IconWheel from "@components/IconWheel";
 import styles from "@styles/wheel.module.css";
 const Wheel = ({ currentSection, onPrev, onNext }) => {
   const [angle, setAngle] = useState(0);
