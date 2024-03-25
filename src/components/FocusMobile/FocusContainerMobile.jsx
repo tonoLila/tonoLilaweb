@@ -11,7 +11,7 @@ const FocusContainerMobile = ({ children }) => {
       xmlns="http://www.w3.org/2000/svg"
     >
       <g>
-        <rect x="0" y="0" width="344" height="677" fill="transparent" />
+        <rect x="0" y="0" width="100%" height="100%" fill="transparent" />
         <FocusMobile />
       </g>
       <foreignObject x="0" y="0" width="100%" height="100%">

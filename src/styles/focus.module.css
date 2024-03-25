@@ -13,3 +13,10 @@
     margin-top: 5em;
     padding: 3em;
 }
+
+@media (max-width: 992px) {
+    .focus_svg {
+        padding: 0 2em;
+        margin-bottom: 1em;
+    }
+}

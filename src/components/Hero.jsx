@@ -49,13 +49,13 @@ const Hero = ({
             <p className={styles.hero_bold}>{boldText}</p>
             <button className={styles.cta}>{button}</button>
           </div>
-          </FocusContainer>
 
           {!isDesktop && (
             <div className="button_container">
               <Markers sections={sections} currentSection={currentSection} />
             </div>
           )}
+        </FocusContainer>
       </div>
     </motion.div>
   );
