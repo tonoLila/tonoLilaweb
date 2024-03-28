@@ -89,7 +89,6 @@ const Home = () => {
             currentSection === "voces" ? "Ver entrevistas" : "Descubrir +"
           }
           isDesktop={isDesktop}
-          sectionClass={currentSection}
           sections={sections}
           currentSection={currentSection}
         />

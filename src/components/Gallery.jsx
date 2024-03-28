@@ -10,25 +10,25 @@ const Gallery = () => {
   const x = useTransform(scrollYProgress, [0, 1], ["75%", "-30%"]);
 
   return (
-    <div>
-      <section className={styles.gallery_section} ref={targetRef}>
-        <div className={styles.gallery_container}>
-          <motion.div
-            className={styles.image_wrapper}
-            style={{ x, transition: { duration: 0.3 } }}
-          >
-            {images.map((image, index) => (
-              <img
-                className={styles.image}
+    <section className={styles.horizontal_gallery_section} ref={targetRef}>
+      <div className={styles.horizontal_gallery_container}>
+        <motion.div
+          className={styles.horizontal_gallery_images}
+          style={{ x, transition: { duration: 0.3 } }}
+        >
+          {images.map((image, index) => {
+            return (
+              <motion.div
                 key={index}
-                src={`/gallery/${image}`}
-                alt={`Image ${index + 1}`}
-              />
-            ))}
-          </motion.div>
-        </div>
-      </section>
-    </div>
+                className={`${image.class_name} ${styles.image_wrapper}`}
+              >
+                <img src={`/gallery/${image.img}`} alt={`Image ${image.img}`} />
+              </motion.div>
+            );
+          })}
+        </motion.div>
+      </div>
+    </section>
   );
 };
 

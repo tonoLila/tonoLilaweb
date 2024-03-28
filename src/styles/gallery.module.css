@@ -1,9 +1,10 @@
-.gallery_section {
+.horizontal_gallery_section {
     position: relative;
     height: 300vh;
+    background-color: crimson;
 }
 
-.gallery_container {
+.horizontal_gallery_container {
     position: sticky;
     top: 0;
     display: flex;
@@ -12,15 +13,24 @@
     overflow: hidden;
 }
 
-.image_wrapper {
+.horizontal_gallery_images {
     display: flex;
-    height: 50vh;
     gap: 4rem;
 }
 
-.image {
+.image_wrapper {
     overflow: hidden;
-    width: 15vw;
-    height: auto;
-    object-fit: cover;
+    display: block;
+
 }
+
+.image_wrapper img {
+    max-width: 45vw;
+    max-height: 50vh;
+    filter: saturate(40%) sepia(30%) hue-rotate(5deg);
+}
+
+.image_wrapper:hover img {
+    filter: none;
+}
+

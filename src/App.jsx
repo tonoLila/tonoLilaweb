@@ -4,6 +4,7 @@ import Tienda from "@pages/Tienda";
 import Contacto from "@pages/Contacto";
 import Home from "@components/Home";
 import Gallery from "@components/Gallery";
+import HorizontalCarousel from "./components/HorizontalCarousel";
 import { Routes, Route } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 
@@ -18,6 +19,7 @@ function App() {
           <Route path="/tienda" element={<Tienda />} />
           <Route path="/contacto" element={<Contacto />} />
           <Route path="/galeria" element={<Gallery />} />
+          <Route path="/carousel" element={<HorizontalCarousel />} />
         </Routes>
       </AnimatePresence>
     </>
