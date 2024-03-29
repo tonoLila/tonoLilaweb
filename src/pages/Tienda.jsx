@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import HorizontalCarousel from "@components/HorizontalCarousel";
 
 const Tienda = () => {
   return (
-    <div>Tienda</div>
-  )
-}
+    <div>
+      <HorizontalCarousel />
+    </div>
+  );
+};
 
-export default Tienda
+export default Tienda;
