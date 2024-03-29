@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Burger from "@components/Burger";
-import { motion } from "framer-motion";
+import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import styles from "@styles/navbar.module.css";
 
 const Navbar = () => {
@@ -53,7 +53,10 @@ const Navbar = () => {
   ];
 
   return (
-    <div className={styles.nav}>
+    <motion.nav
+      className={styles.nav}
+      variants={{ visible: { y: 0 }, hidden: { y: "-100" } }}
+    >
       <Link to="/" className={styles.logo}>
         Tono{" "}
         <motion.span
@@ -85,7 +88,7 @@ const Navbar = () => {
           </ul>
         </motion.div>
       )}
-    </div>
+    </motion.nav>
   );
 };
 
