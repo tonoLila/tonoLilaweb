@@ -7,6 +7,17 @@ import styles from "@styles/navbar.module.css";
 const Navbar = () => {
   const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 992);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [hidden, setHidden] = useState(false);
+
+  const {scrollY} = useScroll();
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    const previous = scrollY.getPrevious();
+    if (latest > previous && latest > 150) {
+      setHidden(true);
+    } else {
+      setHidden(false);
+    }
+  });
 
   useEffect(() => {
     const handleResize = () => {
@@ -55,19 +66,12 @@ const Navbar = () => {
   return (
     <motion.nav
       className={styles.nav}
-      variants={{ visible: { y: 0 }, hidden: { y: "-100" } }}
+      variants={{ visible: { y: 0 }, hidden: { y: "-100%" } }}
+      animate={hidden ? "hidden" : "visible"}
+      transition={{ duration: 0.35, ease: "easeInOut" }}
     >
       <Link to="/" className={styles.logo}>
-        Tono{" "}
-        <motion.span
-          style={{ textShadow: "0 0 5px #fff" }}
-          animate={{
-            textShadow: ["0 0 5px #fff", "0 0 15px #fff", "0 0 5px #fff"],
-          }}
-          transition={{ repeat: Infinity, duration: 2, ease: "linear" }}
-        >
-          Lila
-        </motion.span>
+        Tono Lila
       </Link>
       {!isDesktop && <Burger />}
       {(isDesktop || isMenuOpen) && (

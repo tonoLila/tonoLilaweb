@@ -30,9 +30,9 @@
     transition: 1s;
 }
 
-.image_wrapper:hover {
+/* .image_wrapper:hover {
     min-height: 65vh;
-}
+} */
 
 .image_wrapper a {
     overflow: hidden;

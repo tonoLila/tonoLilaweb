@@ -5,6 +5,9 @@ const Tienda = () => {
   return (
     <div>
       <HorizontalCarousel />
+      <div
+        style={{ height: "200vh", width: "100vw", backgroundColor: "red" }}
+      />
     </div>
   );
 };
