@@ -9,7 +9,7 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [hidden, setHidden] = useState(false);
 
-  const {scrollY} = useScroll();
+  const { scrollY } = useScroll();
   useMotionValueEvent(scrollY, "change", (latest) => {
     const previous = scrollY.getPrevious();
     if (latest > previous && latest > 150) {
@@ -71,7 +71,7 @@ const Navbar = () => {
       transition={{ duration: 0.35, ease: "easeInOut" }}
     >
       <Link to="/" className={styles.logo}>
-        Tono Lila
+        Tono <span>Lila</span>
       </Link>
       {!isDesktop && <Burger />}
       {(isDesktop || isMenuOpen) && (
