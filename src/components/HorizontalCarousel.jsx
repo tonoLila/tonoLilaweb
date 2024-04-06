@@ -24,7 +24,7 @@ const HorizontalCarousel = () => {
         {images.map((image, index) => {
           return (
             <div key={index} className={`${image.class_name} image_wrapper`}>
-              <a href={`/gallery/${image.img}`} target="_blank">
+              <a href={`/gallery/${image.img}`}>
                 <img src={`/gallery/${image.img}`} alt={`Image ${image.img}`} />
               </a>
             </div>

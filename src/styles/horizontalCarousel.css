@@ -1,18 +1,19 @@
 .external {
     overflow: hidden;
     height: 100vh;
+    width: 100vw;
 }
 
 .horizontal_scroll_wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 95vh;
+    width: 100vh;
     transform: rotate(-90deg) translate3d(0, -100vh, 0);
     transform-origin: right top;
-    overflow-y: auto;
     overflow-x: hidden;
-    padding: 0;
+    overflow-y: auto;
+    padding: 1em;
     height: 100vw;
     perspective: 1px;
     transform-style: preserve-3d;
