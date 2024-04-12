@@ -34,7 +34,7 @@ const HeroTexts = ({ section, isDesktop, boldText }) => {
       <>
         {mobileTexts.creaciones}
   
-         Los invito explorar una nueva dimensión en colores,<br/> marcando al tono; donde la comunicación <br/> converge con la creatividad.
+         Los invito a explorar una nueva dimensión en colores,<br/> marcando al tono; donde la comunicación <br/> converge con la <strong>creatividad.</strong>
       </>
     ),
 
