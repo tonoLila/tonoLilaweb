@@ -33,9 +33,8 @@ const HeroTexts = ({ section, isDesktop, boldText }) => {
     creaciones: (
       <>
         {mobileTexts.creaciones}
-        <br />
-        <br /> Les invito a explorar mi mundo a través de la fotografía, donde
-        cada captura es una expresión única de mi creatividad y visión.
+  
+         Los invito explorar una nueva dimensión en colores, marcando al tono; donde la comunicación converge con la creatividad.
       </>
     ),
 
