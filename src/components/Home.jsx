@@ -80,7 +80,7 @@ const Home = () => {
               ? "Creaciones Lila"
               : "Voces artísticas"
           }
-          imageUrl={`/${currentSection}.webp`}
+          imageUrl={`/${currentSection}.jpg`}
           normalText={
             <HeroTexts section={currentSection} isDesktop={isDesktop} />
           }

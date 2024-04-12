@@ -25,10 +25,9 @@ const HeroTexts = ({ section, isDesktop, boldText }) => {
   const desktopTexts = {
     comunidad: (
       <>
-        En este espacio convergen datos fascinantes, curiosidades y efemérides
-        relacionadas con el arte.
-        <br />
-        <br /> {mobileTexts.comunidad}
+        Los invito explorar una nueva dimensión en colores, marcando al tono; donde la comunicación converge con la creatividad.
+          <br />
+          <br /> {mobileTexts.comunidad}
       </>
     ),
     creaciones: (
@@ -53,8 +52,7 @@ const HeroTexts = ({ section, isDesktop, boldText }) => {
 
     creaciones: (
       <>
-        ¡Acompáñenme en este viaje fotográfico y descubran las narrativas
-        visuales que he tejido para ustedes!
+    
       </>
     ),
 
