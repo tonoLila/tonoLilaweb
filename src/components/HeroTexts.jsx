@@ -8,8 +8,8 @@ const HeroTexts = ({ section, isDesktop, boldText }) => {
     ),
     creaciones: (
       <>
-        ¡Bienvenidos a mi rincón visual! Soy Lila, la mente y el ojo detrás de
-        cada imagen que encontrarán aquí.
+        {/* ¡Bienvenidos a mi rincón visual! Soy Lila, la mente y el ojo detrás de
+        cada imagen que encontrarán aquí. */}
       </>
     ),
     voces: (
