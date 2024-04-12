@@ -17,7 +17,7 @@ body {
 }
 
 .creaciones {
-    background-image: url(/fondoCreaciones.jpg);
+    background-image: url(/fondoCreaciones.webp);
 }
 
 .comunidad {
@@ -30,7 +30,7 @@ body {
 
 @media (max-width: 992px) {
     .creaciones {
-        background-image: url(/fondoMobile.webp);
+        background-image: url(/creacionesMobile.jpg);
     }
 
     .comunidad {
