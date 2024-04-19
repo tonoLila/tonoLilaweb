@@ -46,7 +46,6 @@ const Hero = ({
           >
             <h2 className={styles.hero_title}>{title}</h2>
             <p className={styles.hero_text}>{normalText}</p>
-            <p className={styles.hero_bold}>{boldText}</p>
             <button className={styles.cta}>{button}</button>
           </div>
 

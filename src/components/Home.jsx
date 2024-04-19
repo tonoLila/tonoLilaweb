@@ -84,7 +84,6 @@ const Home = () => {
           normalText={
             <HeroTexts section={currentSection} isDesktop={isDesktop} />
           }
-          boldText={<HeroTexts section={currentSection} boldText />}
           button={
             currentSection === "voces" ? "Ver entrevistas" : "Descubrir +"
           }

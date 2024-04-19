@@ -1,0 +1,59 @@
+.form_container {
+    max-width: 60vw;
+    margin: 0 auto;
+    padding: 1em;
+}
+
+.form {
+    padding: 1em;
+    border-radius: 5px;
+}
+
+.form_row {
+    display: flex;
+    gap: 1em;
+
+}
+
+.form_field {
+    margin-bottom: 1em;
+    width: 100%;
+    flex: 1;
+}
+
+.message_area{
+    height: 200px;
+    resize: none;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: .5em;
+    border: 1px solid #323539;
+    border-radius: 5px;
+    outline: none;
+    background-color: #252525;
+    color: #979aa0;
+}
+
+.error_container {
+    height: 1em;
+}
+
+.error_message {
+    color: red;
+    font-size: .8rem;
+}
+
+.cta {
+    background-color: #614589;
+    border: none;
+    width: 100%;
+    padding: .5em;
+    border-radius: 5px;
+    color: #fff;
+    text-align: center;
+    font-size: 1em;
+    cursor: pointer;
+}

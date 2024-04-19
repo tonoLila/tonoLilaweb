@@ -1,75 +1,32 @@
-const HeroTexts = ({ section, isDesktop, boldText }) => {
-  const mobileTexts = {
+import Style from "@styles/hero.module.css";
+
+const HeroTexts = ({ section }) => {
+  const texts = {
     comunidad: (
       <>
-        Exploremos juntos el vasto universo cultural, descubriendo detalles que
-        enriquecen nuestra comprensión y aprecio por la creatividad.
+        Curiosidades y efemérides. Exploremos juntos!
+        <br /> Cada día es una oportunidad para aprender,
+        <br />
+        compartir y celebrar lo maravilloso que es el Arte!
       </>
     ),
     creaciones: (
       <>
-        {/* ¡Bienvenidos a mi rincón visual! Soy Lila, la mente y el ojo detrás de
-        cada imagen que encontrarán aquí. */}
+        Los invito a explorar una nueva dimensión en colores,
+        <br /> marcando al tono; donde la comunicación
+        <br /> converge con la <span className={Style.bold}>creatividad</span>.
       </>
     ),
     voces: (
       <>
-        Explora este espacio donde convergen las distintas formas de
-        creatividad. A través de cautivadoras entrevistas, nos adentramos en las
-        historias, inspiraciones y procesos creativos de talentosos artistas:
-        músicos, escultores, pintores y más.
+        En este espacio ponemos en palabras
+         vivencias de distintos artistas. Descubrimos sus narrativas
+        <br />y la importancia del mundo artístico.
       </>
     ),
   };
 
-  const desktopTexts = {
-    comunidad: (
-      <>
-        Los invito explorar una nueva dimensión en colores, marcando al tono; donde la comunicación converge con la creatividad.
-          <br />
-          <br /> {mobileTexts.comunidad}
-      </>
-    ),
-    creaciones: (
-      <>
-        {mobileTexts.creaciones}
-  
-         Los invito a explorar una nueva dimensión en colores,<br/> marcando al tono; donde la comunicación <br/> converge con la <strong>creatividad.</strong>
-      </>
-    ),
-
-    voces: <>{mobileTexts.voces}</>,
-  };
-
-  const boldTexts = {
-    comunidad: (
-      <>
-        ¡Cada día es una oportunidad para aprender, compartir, rememorar y
-        celebrar la riqueza del arte!
-      </>
-    ),
-
-    creaciones: (
-      <>
-    
-      </>
-    ),
-
-    voces: (
-      <>
-        Descubrimos las fascinantes narrativas detrás de cada obra, llevando luz
-        a la diversidad del mundo artístico.
-      </>
-    ),
-  };
-
-  const normalText = isDesktop ? desktopTexts[section] : mobileTexts[section];
-  const boldTextContent = boldTexts[section];
-
-  return <>
-  {!boldText && normalText}
-  {boldText && boldTextContent}
-  </>;
+  return <>{texts[section]}</>;
 };
 
 export default HeroTexts;
