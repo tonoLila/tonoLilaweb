@@ -14,7 +14,7 @@ const HeroTexts = ({ section }) => {
       <>
         Los invito a explorar una nueva dimensión en colores,
         <br /> marcando al tono; donde la comunicación
-        <br /> converge con la <span className={Style.bold}>creatividad</span>.
+        <br /> converge en juego con la <span className={Style.bold}>creatividad</span>.
       </>
     ),
     voces: (
