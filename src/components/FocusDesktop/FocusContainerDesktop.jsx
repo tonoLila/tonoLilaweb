@@ -5,9 +5,9 @@ const FocusContainerDesktop = ({ children }) => {
   return (
     <svg
       className={styles.focus_svg}
-      width="100%"
-      height=" 100%"
-      viewBox="0 0 1162 624"
+      width="90%"
+      height="90%"
+      viewBox="0 0 1046 561"
       xmlns="http://www.w3.org/2000/svg"
     >
       <g>
