@@ -21,11 +21,12 @@ body {
 }
 
 .comunidad {
-    background-image: url(/fondoComunidad.jpg);
+    background-image: url(/s.jpg);
 }
 
 .voces {
-    background-image: url(/fondoVoces.jpg);
+    background-image: url(/s.jpg);
+    background-size: cover;
 }
 
 @media (max-width: 992px) {

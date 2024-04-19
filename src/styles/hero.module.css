@@ -19,6 +19,7 @@
 .hero_image {
     border-radius: 50%;
     width: 75%;
+    object-fit: cover;
 }
 
 .image_container {
@@ -39,7 +40,7 @@
 }
 
 .hero_title {
-    font-family: 'Montserrat Alternates', serif;
+    font-family: 'Montserrat', serif;
     font-size: 3em;
     text-align: center;
     color: #fff;
