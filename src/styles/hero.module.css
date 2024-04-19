@@ -42,7 +42,7 @@
 .hero_title {
     font-family: 'Montserrat', serif;
     font-size: 3em;
-    text-align: center;
+    text-align: start;
     color: #fff;
     font-weight: bold;
     text-transform: uppercase;
