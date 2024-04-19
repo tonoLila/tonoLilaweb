@@ -77,7 +77,7 @@ const FocusDesktop = () => {
       />
       <path
         d="M578 592L578 622"
-        stroke="transparent"
+        stroke="#B4B4B4"
         strokeWidth="3"
         strokeLinecap="round"
       />
