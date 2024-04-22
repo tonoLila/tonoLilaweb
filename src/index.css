@@ -31,14 +31,14 @@ body {
 
 @media (max-width: 992px) {
     .creaciones {
-        background-image: url(/creacionesMobile.jpg);
+        background-image: url(/2.jpg);
     }
 
     .comunidad {
-        background-image: url(/fondoMobile.webp);
+        background-image: url(/2.jpg);
     }
 
     .voces {
-        background-image: url(/fondoMobile.webp);
+        background-image: url(/2.jpg);
     }
 }
