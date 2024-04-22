@@ -37,6 +37,7 @@
     align-items: center;
     text-wrap: balance;
     text-align: justify;
+    padding-left: .5em;
 }
 
 .hero_title {
@@ -46,14 +47,16 @@
     color: #fff;
     font-weight: bold;
     text-transform: uppercase;
+    width: 100%;
 }
 
 .hero_text {
+    width: 100%;
     text-align: start;
     line-height: normal;
     font-size: 1.1em;
     color: #fff;
-    padding: 1em;
+    padding-top: 1em;
 }
 .cta {
     background-color: #614589;

@@ -14,6 +14,7 @@
     align-items: center;
     height: 100vh;
     width: 100%;
+    padding-top: 25em;
 }
 
 .contact_title {
@@ -37,11 +38,19 @@
 }
 
 .contact_form {
+    height: 100vh;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 3em;
+    background-color: #00000000;
+}
+
+.contact_button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
 }
 
 .form_title {
@@ -54,3 +63,4 @@
     color: #fff;
     text-align: center;
 }
+
