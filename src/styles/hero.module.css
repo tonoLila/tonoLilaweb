@@ -76,7 +76,8 @@
 
 @media (max-width: 992px) {
     .image_container {
-        display: none;
+        margin-top: 5rem;
+        width: 75%;
     }
 
     .hero {
@@ -89,7 +90,7 @@
         height: 100vh;
         padding: 0;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: space-evenly;
         align-items: center;
     }
 
@@ -100,7 +101,7 @@
         justify-content: center;
         align-items: center;
         padding: 1em;
-        padding-bottom: 5em;
+        padding-bottom: 2em;
         margin-top: auto;
     }
 
@@ -109,17 +110,13 @@
         text-align: center;
         padding: .5em;
         color: #fff;
+        justify-content: center;
     }
 
     .hero_text {
         font-size: 1em;
         color: #fff;
-    }
-
-    .bold {
-        font-size: 1em;
-        padding: .5em;
-        color: #fff;
+        text-align: center;
     }
 
     .cta_mobile {

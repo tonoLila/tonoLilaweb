@@ -19,7 +19,6 @@
 
 .contact_title {
     color: #fff;
-    position: relative;
     font-size: 3rem;
     font-weight: bold;
     font-family: 'Montserrat';
@@ -51,6 +50,8 @@
     background-color: transparent;
     border: none;
     cursor: pointer;
+    position: absolute;
+    bottom: 10%;
 }
 
 .form_title {
