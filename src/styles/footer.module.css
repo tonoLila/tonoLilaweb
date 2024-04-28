@@ -1,0 +1,15 @@
+.footer_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1rem;
+    width: 100%;
+    gap: 1rem;
+    padding: 1rem;
+    position: relative;
+    bottom: .5rem;
+}
+
+.footer_container img{
+    width: 2rem;
+}

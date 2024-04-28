@@ -77,11 +77,11 @@
 @media (max-width: 992px) {
     .image_container {
         margin-top: 5rem;
-        width: 75%;
+        width: 75vw;
     }
 
     .hero {
-        flex-direction: column;
+        
         width: 100%;
     }
 
@@ -90,23 +90,20 @@
         height: 100vh;
         padding: 0;
         flex-direction: column;
-        justify-content: space-evenly;
+        justify-content: space-around;
         align-items: center;
     }
 
     .text_container {
         width: 100%;
         display: flex;
-        flex-direction: column;
         justify-content: center;
         align-items: center;
         padding: 1em;
-        padding-bottom: 2em;
-        margin-top: auto;
     }
 
     .hero_title {
-        font-size: 2em;
+        font-size: 1.5rem;
         text-align: center;
         padding: .5em;
         color: #fff;
@@ -114,7 +111,7 @@
     }
 
     .hero_text {
-        font-size: 1em;
+        font-size: 1rem;
         color: #fff;
         text-align: center;
     }
