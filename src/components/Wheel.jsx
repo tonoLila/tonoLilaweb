@@ -18,12 +18,13 @@ const Wheel = ({ currentSection, onPrev, onNext }) => {
 
   const handleScroll = (event) => {
     const delta = event.deltaY;
+    console.log(delta)
+    const rotationDirection = delta > 0 ? -40 : 40;
     if (delta > 0) {
       onNext();
     } else if (delta < 0) {
       onPrev();
     }
-    const rotationDirection = delta > 0 ? -40 : 40;
     setAngle(angle + rotationDirection);
     setIsActive(true);
   };
