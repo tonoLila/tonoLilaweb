@@ -50,11 +50,21 @@ const Home = () => {
     preventScrollOnSwipe: true,
   });
 
+  const handleWheel = (event) => {
+    const delta = event.deltaY;
+    if (delta > 0) {
+      handleNext();
+    } else if (delta < 0) {
+      handlePrev();
+    }
+  };
+
   return (
     <>
       <motion.div
         {...handlers}
         key={currentSection}
+        onWheel={handleWheel}
         className={styles.home_container}
         initial={{
           opacity: isDesktop ? 1 : 0,
