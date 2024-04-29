@@ -16,8 +16,21 @@ const Wheel = ({ currentSection, onPrev, onNext }) => {
     setIsActive(false);
   };
 
+  const handleScroll = (event) => {
+    const delta = event.deltaY;
+    if (delta > 0) {
+      onNext();
+    } else if (delta < 0) {
+      onPrev();
+    }
+    const rotationDirection = delta > 0 ? -40 : 40;
+    setAngle(angle + rotationDirection);
+    setIsActive(true);
+  };
+
   return (
     <motion.div
+      onWheel={handleScroll}
       initial={{ y: 500 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5, type: "tween", ease: "easeInOut" }}
