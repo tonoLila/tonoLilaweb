@@ -18,7 +18,6 @@ const Wheel = ({ currentSection, onPrev, onNext }) => {
 
   const handleScroll = (event) => {
     const delta = event.deltaY;
-    console.log(delta)
     const rotationDirection = delta > 0 ? -40 : 40;
     if (delta > 0) {
       onNext();
@@ -31,15 +30,16 @@ const Wheel = ({ currentSection, onPrev, onNext }) => {
 
   return (
     <motion.div
-      onWheel={handleScroll}
+      className={styles.wheel_container}
       initial={{ y: 500 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5, type: "tween", ease: "easeInOut" }}
     >
       <svg
         className={styles.wheel}
-        width="1080"
-        height="768"
+        onWheel={handleScroll}
+        width="80%"
+        height="80%"
         viewBox="0 -700 1440 1024"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

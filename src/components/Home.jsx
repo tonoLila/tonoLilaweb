@@ -5,6 +5,7 @@ import Wheel from "@components/Wheel";
 import Hero from "@components/Hero";
 import HeroTexts from "@components/HeroTexts";
 import styles from "@styles/home.module.css";
+import transition from "@transition";
 
 const Home = () => {
   const [currentSection, setCurrentSection] = useState("creaciones");
@@ -49,15 +50,6 @@ const Home = () => {
     onSwipedRight: handlePrev,
     preventScrollOnSwipe: true,
   });
-
-  // const handleWheel = (event) => {
-  //   const delta = event.deltaY;
-  //   if (delta > 0) {
-  //     handleNext();
-  //   } else if (delta < 0) {
-  //     handlePrev();
-  //   }
-  // };
 
   return (
     <>
@@ -111,4 +103,4 @@ const Home = () => {
     </>
   );
 };
-export default Home;
+export default transition(Home);

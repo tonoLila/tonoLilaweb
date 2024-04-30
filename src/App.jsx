@@ -3,23 +3,29 @@ import Aboutme from "@pages/Aboutme";
 import Tienda from "@pages/Tienda";
 import Contacto from "@pages/Contacto";
 import Home from "@components/Home";
-import Gallery from "@components/Gallery";
-import HorizontalCarousel from "./components/HorizontalCarousel";
-import { Routes, Route } from "react-router-dom";
+import Voces from "@pages/Voces";
+import Creaciones from "@pages/Creaciones";
+import Comunidad from "@pages/Comunidad";
+import NotFound from "@pages/NotFound";
+import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 
 function App() {
+  const location = useLocation();
+
   return (
     <>
       <Navbar />
-      <AnimatePresence>
-        <Routes>
+      <AnimatePresence mode="wait">
+        <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Home />} />
           <Route path="/aboutme" element={<Aboutme />} />
           <Route path="/tienda" element={<Tienda />} />
           <Route path="/contacto" element={<Contacto />} />
-          <Route path="/galeria" element={<Gallery />} />
-          <Route path="/carousel" element={<HorizontalCarousel />} />
+          <Route path="/voces" element={<Voces />} />
+          <Route path="/creaciones" element={<Creaciones />} />
+          <Route path="/comunidad" element={<Comunidad />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </AnimatePresence>
     </>

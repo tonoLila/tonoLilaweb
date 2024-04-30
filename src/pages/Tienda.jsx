@@ -1,5 +1,6 @@
 import React from "react";
 import HorizontalCarousel from "@components/HorizontalCarousel";
+import transition from "@transition";
 
 const Tienda = () => {
   return (
@@ -12,4 +13,4 @@ const Tienda = () => {
   );
 };
 
-export default Tienda;
+export default transition(Tienda);

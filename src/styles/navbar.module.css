@@ -20,7 +20,7 @@
     justify-content: space-between;
     align-items: baseline;
     z-index: 10;
-    background-color: #111111d7;
+    background-color: transparent;
     position: fixed;
 }
 

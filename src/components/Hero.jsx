@@ -26,7 +26,12 @@ const Hero = ({
       >
         <h2 className={styles.hero_title}>{title}</h2>
         <p className={styles.hero_text}>{normalText}</p>
-        <motion.button whileTap={{ scale: 0.9 }} className={styles.cta}>
+        <motion.button
+          type="button"
+          onClick={() => console.log("clicked")}
+          whileTap={{ scale: 0.9 }}
+          className={styles.cta}
+        >
           {button}
         </motion.button>
       </div>
@@ -51,11 +56,7 @@ const Hero = ({
       }}
     >
       <div className={styles.hero_container}>
-        {isDesktop ? (
-          <FocusContainer>{content}</FocusContainer>
-        ) : (
-          content
-        )}
+        {isDesktop ? <FocusContainer>{content}</FocusContainer> : content}
       </div>
     </motion.div>
   );

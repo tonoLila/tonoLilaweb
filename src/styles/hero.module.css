@@ -14,6 +14,7 @@
     align-items: center;
     height: 80vh;
     width: 100%;
+    z-index: 1;
 }
 
 .hero_image {
@@ -67,7 +68,7 @@
     text-align: center;
     font-size: 1.2em;
     margin-top: 1em;
-    z-index: 50;
+    cursor: pointer;
 }
 
 .bold{

@@ -10,6 +10,7 @@ export default defineConfig({
       "@styles": path.resolve(__dirname, "./src/styles"),
       "@pages": path.resolve(__dirname, "./src/pages"),
       "@galleryImages": path.resolve(__dirname, "./src/galleryImages"),
+      "@transition": path.resolve(__dirname, "./src/transition"),
     },
   },
 });

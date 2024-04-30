@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import React, { useState, useEffect, useRef } from "react";
 import styles from "@styles/contact.module.css";
 import MyForm from "@components/MyForm";
+import transition from "@transition";
 
 const Contacto = () => {
   const [bgColor, setBgColor] = useState("rgba(0, 0, 0, 0)");
@@ -51,4 +52,4 @@ const Contacto = () => {
   );
 };
 
-export default Contacto;
+export default transition(Contacto);

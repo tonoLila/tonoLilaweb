@@ -69,18 +69,18 @@ const FocusDesktop = () => {
         strokeWidth="2"
         strokeLinecap="round"
       />
-      <path
+      {/* <path
         d="M578 2L578 32"
         stroke="#B4B4B4"
         strokeWidth="3"
         strokeLinecap="round"
-      />
-      <path
+      /> */}
+      {/* <path
         d="M578 592L578 622"
         stroke="#B4B4B4"
         strokeWidth="3"
         strokeLinecap="round"
-      />
+      /> */}
       <path
         d="M1160 304L1130 304"
         stroke="#B4B4B4"
