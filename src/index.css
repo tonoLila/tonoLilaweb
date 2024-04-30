@@ -73,4 +73,12 @@ body {
     .voces {
         background-image: url(/2.jpg);
     }
+
+    .slide_in {
+        display: none;
+    }
+
+    .slide_out {
+        display: none;
+    }
 }
