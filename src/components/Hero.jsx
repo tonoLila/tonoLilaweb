@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import Markers from "@components/Markers";
 import styles from "@styles/hero.module.css";
 import FocusContainer from "./FocusDesktop/FocusContainerDesktop";
+import Footer from "@components/Footer";
 
 const Hero = ({
   title,
@@ -34,12 +35,13 @@ const Hero = ({
         >
           {button}
         </motion.button>
+        {!isDesktop && (
+          <div className="button_container">
+            <Markers sections={sections} currentSection={currentSection} />
+            <Footer />
+          </div>
+        )}
       </div>
-      {!isDesktop && (
-        <div className="button_container">
-          <Markers sections={sections} currentSection={currentSection} />
-        </div>
-      )}
     </>
   );
 
