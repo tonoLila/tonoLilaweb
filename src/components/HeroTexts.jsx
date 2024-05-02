@@ -4,7 +4,7 @@ const HeroTexts = ({ section }) => {
   const texts = {
     comunidad: (
       <>
-        Curiosidades y efemérides.<br/> Exploremos juntos!
+        Curiosidades y efemérides. Exploremos juntos!
         <br /> Cada día es una oportunidad para aprender,
         <br />
         compartir y celebrar lo maravilloso que es el <span className={Style.bold}>Arte!</span>
