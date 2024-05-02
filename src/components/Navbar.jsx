@@ -40,7 +40,7 @@ const Navbar = () => {
       key="aboutme"
       onClick={handleItemClick}
     >
-      Quien soy?
+        ¿Quién soy?
     </Link>,
     <Link
       to="/tienda"

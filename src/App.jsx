@@ -6,7 +6,6 @@ import Home from "@components/Home";
 import Voces from "@pages/Voces";
 import Creaciones from "@pages/Creaciones";
 import Comunidad from "@pages/Comunidad";
-import NotFound from "@pages/NotFound";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 
@@ -18,14 +17,13 @@ function App() {
       <Navbar />
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
-          <Route path="/" element={<Home />} />
+          <Route path="/*" element={<Home />} />
           <Route path="/aboutme" element={<Aboutme />} />
           <Route path="/tienda" element={<Tienda />} />
           <Route path="/contacto" element={<Contacto />} />
           <Route path="/voces" element={<Voces />} />
           <Route path="/creaciones" element={<Creaciones />} />
           <Route path="/comunidad" element={<Comunidad />} />
-          <Route path="*" element={<NotFound />} />
         </Routes>
       </AnimatePresence>
     </>

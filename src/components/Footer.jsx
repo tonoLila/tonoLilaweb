@@ -9,7 +9,7 @@ const Footer = () => {
       <a href="http://instagram.com" target="_blank" rel="noopener noreferrer">
         <img src="/social/instagram.svg"></img>
       </a>
-      <a href="http://twitter.com" target="_blank" rel="noopener noreferrer">
+      <a href="http://youtube.com" target="_blank" rel="noopener noreferrer">
         <img src="/social/youtube.svg"></img>
       </a>
     </div>

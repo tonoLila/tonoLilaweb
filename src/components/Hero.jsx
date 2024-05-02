@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import Markers from "@components/Markers";
 import styles from "@styles/hero.module.css";
 import FocusContainer from "./FocusDesktop/FocusContainerDesktop";
@@ -27,14 +28,16 @@ const Hero = ({
       >
         <h2 className={styles.hero_title}>{title}</h2>
         <p className={styles.hero_text}>{normalText}</p>
-        <motion.button
-          type="button"
-          onClick={() => console.log("clicked")}
-          whileTap={{ scale: 0.9 }}
-          className={styles.cta}
-        >
-          {button}
-        </motion.button>
+        <Link to={`/${currentSection}`}>
+          <motion.button
+            type="button"
+            onClick={() => console.log("clicked")}
+            whileTap={{ scale: 0.9 }}
+            className={styles.cta}
+          >
+            {button}
+          </motion.button>
+        </Link>
         {!isDesktop && (
           <div className="button_container">
             <Markers sections={sections} currentSection={currentSection} />

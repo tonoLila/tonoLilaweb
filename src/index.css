@@ -13,29 +13,12 @@
 }
 
 body {
-    background-color: #000;
-}
-
-.creaciones {
-    background-image: url(/2.jpg);
-}
-
-.comunidad {
-    background-image: url(/1.jpg);
-}
-
-.voces {
-    background-image: url(/3.jpg);
-    background-size: cover;
-}
-
-.error {
-    background-image: url(/404.jpg);
-    width: 100vw;
-    height: 100vh;
-    background-size: cover;
-    position: fixed;
+    background-image: url(/background.jpg);
+    background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    
 }
 
 .slide_in {

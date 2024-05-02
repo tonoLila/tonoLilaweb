@@ -42,12 +42,12 @@ textarea {
 }
 
 .error_message {
-    color: #614589;
+    color: #C06EFF;
     font-size: .8rem;
 }
 
 .cta {
-    background-color: #614589;
+    background-color: #C06EFF;
     border: none;
     width: 100%;
     padding: .5em;
