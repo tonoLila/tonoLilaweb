@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
+import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import { Link } from "react-router-dom";
 import Burger from "@components/Burger";
-import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import styles from "@styles/navbar.module.css";
 
 const Navbar = () => {
@@ -40,7 +40,7 @@ const Navbar = () => {
       key="aboutme"
       onClick={handleItemClick}
     >
-        ¿Quién soy?
+      ¿Quién soy?
     </Link>,
     <Link
       to="/tienda"

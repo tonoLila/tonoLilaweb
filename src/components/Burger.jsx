@@ -3,6 +3,7 @@ import "@styles/hamburgers.css";
 import styles from "@styles/navbar.module.css";
 import { NavLink } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
+import Footer from "@components/Footer";
 
 const Burger = () => {
   const [isActive, setIsActive] = useState(false);
@@ -69,6 +70,7 @@ const Burger = () => {
                 <li key={index}>{item}</li>
               ))}
             </ul>
+            <Footer/>
           </motion.div>
         )}
       </AnimatePresence>
