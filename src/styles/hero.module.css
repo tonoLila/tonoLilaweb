@@ -24,7 +24,7 @@
 }
 
 .image_container {
-    width: 50%;
+    width: 40%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -74,6 +74,7 @@
     margin-bottom: 2rem;
 }
 .cta {
+    position: absolute;
     background-color: #C06EFF;
     border: none;
     padding: .3em .5em;

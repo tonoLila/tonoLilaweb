@@ -11,20 +11,24 @@ const voces = () => {
         <h1 className={styles.title}>Voces Artisticas</h1>
         <section className={styles.cards_container}>
           <div className={styles.first_card}>
-            <Cards imageUrl="1" text="Entrevistas a músicos" link="voces" />
+            <Cards imageUrl="1" text="Entrevistas a músicos" link="tonolila" />
           </div>
           <div className={styles.second_card}>
             <Cards
               imageUrl="2"
               text="Entrevistas a artistas plasticos"
-              link="voces"
+              link="tonolila"
             />
           </div>
           <div className={styles.third_card}>
-            <Cards imageUrl="3" text="Otras entrevistas" link="voces" />
+            <Cards imageUrl="3" text="Otras entrevistas" link="tonolila" />
           </div>
           <div className={styles.fourth_card}>
-            <Cards imageUrl="4" text="Entrevistas a escultores" link="voces" />
+            <Cards
+              imageUrl="4"
+              text="Entrevistas a escultores"
+              link="tonolila"
+            />
           </div>
         </section>
       </div>

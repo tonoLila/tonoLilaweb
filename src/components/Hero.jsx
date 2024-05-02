@@ -14,6 +14,7 @@ const Hero = ({
   sections,
   currentSection,
 }) => {
+
   const content = (
     <>
       <div className={styles.image_container}>

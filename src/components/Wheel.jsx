@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import IconWheel from "@components/IconWheel";
 import styles from "@styles/wheel.module.css";
-const Wheel = ({ currentSection, onPrev, onNext }) => {
+const Wheel = ({ currentSection, onPrev, onNext, wheelActive }) => {
   const [angle, setAngle] = useState(0);
   const [isActive, setIsActive] = useState(false);
 
@@ -30,7 +30,7 @@ const Wheel = ({ currentSection, onPrev, onNext }) => {
 
   return (
     <motion.div
-      className={styles.wheel_container}
+      id="wheel"
       initial={{ y: 500 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5, type: "tween", ease: "easeInOut" }}

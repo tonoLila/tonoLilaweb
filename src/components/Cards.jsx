@@ -29,8 +29,8 @@ const Cards = ({ imageUrl, text, link }) => {
     });
   };
   return (
-    <Link
-      to={link}
+    <a
+      href={`https://www.youtube.com/@${link}`}
       className={styles.card}
       onMouseEnter={handleHover}
       onMouseLeave={handleLeave}
@@ -56,7 +56,7 @@ const Cards = ({ imageUrl, text, link }) => {
           <motion.p className={styles.card_text}>{text}</motion.p>
         </div>
       </div>
-    </Link>
+    </a>
   );
 };
 
