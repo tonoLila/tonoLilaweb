@@ -9,6 +9,11 @@
     margin-bottom: .5rem;
 }
 
+.footer_container a:hover{
+    scale: 1.5;
+    transition: scale .1s linear;
+}
+
 .footer_container::before {
     position: absolute;
     bottom: 3rem;
