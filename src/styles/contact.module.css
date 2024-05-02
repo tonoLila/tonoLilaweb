@@ -20,9 +20,10 @@
 .contact_title {
     color: #fff;
     font-size: 3rem;
-    font-weight: bold;
+    font-weight: 900;
     font-family: 'Montserrat';
     text-transform: uppercase;
+    text-shadow: 0 2px 1px #000;
 }
 
 .contact_title::after {
