@@ -34,7 +34,7 @@
     bottom: -10px;
     width: 110%;
     height: 5px;
-    background-color: #C06EFF;
+    background-color: var(--primary-color);
 }
 
 .contact_form {

@@ -22,7 +22,7 @@
     transform: translateX(-50%);
     width: 80%;
     height: 1px;
-    background-color: #C06EFF;
+    background-color: var(--primary-color);
 }
 
 .footer_container img {

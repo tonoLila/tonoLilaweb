@@ -6,6 +6,9 @@
     box-sizing: border-box;
     font-family: Inter, sans-serif;
     scrollbar-width: none;
+    --primary-color: #614589;
+    --secondary-color: #C06EFF;
+    --third-color: #ddc4f7;
 
     ::-webkit-scrollbar {
         display: none;
@@ -18,7 +21,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
-    
+
 }
 
 .slide_in {
