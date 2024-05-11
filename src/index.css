@@ -6,8 +6,8 @@
     box-sizing: border-box;
     font-family: Inter, sans-serif;
     scrollbar-width: none;
-    --primary-color: #614589;
-    --secondary-color: #C06EFF;
+    --primary-color: #C06EFF;
+    --secondary-color: #614589;
     --third-color: #ddc4f7;
 
     ::-webkit-scrollbar {

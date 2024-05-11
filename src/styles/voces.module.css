@@ -9,6 +9,15 @@
     margin-bottom: 2rem;
 }
 
+.sub_title {
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
 .title::after {
     position: absolute;
     bottom: -10px;
@@ -26,6 +35,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 0 auto;
 }
 
 .cards_container {
@@ -82,7 +92,6 @@
 
 @media(min-width:1601px) {
     .title {
-        margin-bottom: 4rem;
         font-size: 2.5rem;
     }
 
